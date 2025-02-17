@@ -3,6 +3,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Mainnav from "@/components/main-nav";
 import { marketingConfig } from "@/config/marketing";
+import SiteFooter from "@/components/site-footer";
 
 export default function MarketingLayout({
   children,
@@ -11,8 +12,8 @@ export default function MarketingLayout({
 }) {
   return (
     <div>
-      <header className="container z-40 bg-background">
-        <div className="h-20 py-6 flex items-center justify-between">
+      <header className="container mx-auto z-40 bg-background">
+        <div className="py-6 flex items-center justify-between">
           <Mainnav items={marketingConfig.mainNav} />
           <nav>
             <Link
@@ -28,6 +29,7 @@ export default function MarketingLayout({
         </div>
       </header>
       <main>{children}</main>
+      <SiteFooter />
     </div>
   );
 }
